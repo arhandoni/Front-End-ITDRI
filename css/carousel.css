@@ -1,0 +1,202 @@
+/* body {
+  background-color: #100e17;
+  font-family: 'Open Sans', sans-serif;
+} */
+
+.container2 {
+  position:relative;
+  height: 300px;
+  width: 400px;
+  top: 60px;
+  /* left: calc(75% - 300px); */
+  display: flex;
+  text-align: center;
+}
+
+.card2 {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card2:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card2:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card2:hover ~ .card2 {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: #1F2855;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 1.5rem;
+}
+
+.title:hover{
+  font-weight: 500;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card2:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: #1F2855;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: rgb(219, 219, 219);
+  stroke-width: 2px;
+}
+
+.card2:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+
+/* CAROUSEL INDEX */
+
+.container-carousel{
+  min-height: 20rem;
+  padding: 3rem 0;
+  background-color: rgb(247, 247, 247);
+}
+
+.button-carousel {
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.container-carousel h1{
+  text-align: center;
+  font-weight: 600;
+}
+
+.container3 {
+  /* position: relative; */
+  min-height: 15rem;
+  width: 320px;
+  margin: 7rem auto 0 auto;
+  perspective: 1000px;
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face { 
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
+}
+
+span {
+  margin: auto;
+  /* font-size: 2rem; */
+}
+
+
+.carousel__face:nth-child(1) {
+  background-image: url("../img/product/Big\ Data\ Platform.jpg");
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) { 
+  background-image: url("../img/product/API\ Management.jpg");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+  background-image: url("../img/product/AI\ and\ Management.jpg");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+  background-image: url("../img/product/Analytics\ Platform.jpg");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) { 
+  background-image: url("../img/product/Smarteye.jpg");
+ transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) { 
+  background-image: url("../img/product/OCA\ Chatbot.jpg");
+ transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) { 
+  background-image: url("../img/product/Management\ Data.jpg");
+ transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+  background-image: url("../img/product/Network\ Security.jpg");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+  background-image: url("../img/product/File\ Tools.png");
+  transform: rotateY(320deg) translateZ(430px); }
+
+
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
